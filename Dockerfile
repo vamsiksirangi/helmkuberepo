@@ -1,6 +1,6 @@
 FROM alpine:latest AS k8scomponents
 
-ARG k8sVERSION=v1.14.8
+ARG k8sVERSION=v1.15.7
 ARG HELMVERSION=v2.16.0
 ARG TAR_FILE="helm-${HELMVERSION}-linux-amd64.tar.gz"
 
