@@ -34,9 +34,9 @@ RUN mv linux-amd64/helm /usr/local/bin/helm && \
 RUN chmod +x /tmp/apps/kubectl && \
     mv /tmp/apps/kubectl /usr/local/bin/kubectl
 	
-#ENV http_proxy=http://nonprod.inetgw.aa.com:9093/ \
-#  https_proxy=http://nonprod.inetgw.aa.com:9093/ \
-#ENV no_proxy="artifacts.aa.com, nexusread.aa.com"
+ENV HTTP_PROXY="nonprod.inetgw.aa.com:9093" \
+    HTTPS_PROXY="nonprod.inetgw.aa.com:9093" \
+    no_proxy="artifacts.aa.com, nexusread.aa.com"
 
 USER $JENKINS_USERNAME
 
