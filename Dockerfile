@@ -18,8 +18,8 @@ FROM microsoft/azure-cli
 ARG JENKINS_USER="10011"
 ARG JENKINS_USERNAME="cicduser"
 
-RUN addgroup -S $JENKINS_USER && \
-    adduser --disabled-password -S $JENKINS_USERNAME -G $JENKINS_USER
+RUN addgroup -g $JENKINS_USER $JENKINS_USER && \
+    adduser --disabled-password -u $JENKINS_USER -S $JENKINS_USERNAME
 
 RUN mkdir -p /tmp/apps 
 
