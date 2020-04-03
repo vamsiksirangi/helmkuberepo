@@ -16,8 +16,8 @@ jobs:
       uses: risfeng/docker-image-build-push-action@v1.0
       with:
         # Docker Registry Url, eg: registry.xxxxx.cs.com
-        registry_url: hub.docker.com
-        namespace: pavankrish
+        registry_url: registry.hub.docker.com
+        namespaces: pavankrish
         # Docker Image Repository Name, eg: adc.ms.eureka
         repository_name: myhelmkubeimage
         # Docker Login UserName, from: https://cr.console..com/
